@@ -1,241 +1,258 @@
-html {
-	background: #bbc3c6;
-	font: 62.5%/1.5em "Trebuchet Ms", helvetica;
-  }
-  
-  * {
-	box-sizing: border-box;
-	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
-  }
-  
-  @font-face {
-	  font-family: 'Shopper';
-	  src: url('http://www.shopperfont.com/font/Shopper-Std.ttf');
-  }
-  
-  .shopper {
-	text-transform: lowercase;
-	font: 2em 'Shopper', sans-serif;
-	line-height: 0.5em;
-	display: inline-block;
-  }
-  
-  
-  
-  h1 {
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 2.5em;
-  }
-  
-  p {
-	font-size: 1.5em;
-	color: #8a8a8a;
-  }
-  
-  input {
-	border: 0.3em solid #bbc3c6;
-	padding: 0.5em 0.3em; 
-	font-size: 1.4em;
-	color: #8a8a8a;
+body {
+	background-color: greenyellow;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*.container {
+	margin: auto;
+	background-color: honeydew;
+	width: 80%;
+	padding: 1em;
+}*/
+.header{
 	text-align: center;
-  }
-  
-  img {
-	max-width: 9em;
-	width: 100%;
-	overflow: hidden; 
+	background-color: orangered;
+	width: auto;
+	height:100px;
+}
+.btn {
+	padding: 1em;
+	margin: 1em;
+	font-size: 1em;
+	background-color: red;
+	border-radius: 0.25em;
+	border: 0 solid snow;
+	color: snow;
+}
+.btn-sm {
+	padding: 0.25em;
+	margin: 0.25em;
+	font-size: 0.75em;
+	background-color: #3FA9E2;
+}
+
+  .btn-med {
+	padding: 0.75em;
+	margin: 0.75em;
+	font-size: 0.75em;
+	background-color: #3FA9E2;
+}
+
+.field {
+	margin: 1em;
+}
+
+
+
+.orderBox {
+	display: flex;
+	
+
+	/* position: fixed; */
+	/* width: 20em;
+	min-height: 25em;
+	background-color: violet;
+	top: 0em;
+	right: 0em;
 	margin-right: 1em;
-  }
-  
-  a {
-	text-decoration: none;
-  }
-  
-  .container {
-	max-width: 90em;
+	padding: 1em; */
+}
+
+.hidden {
+	display: none;
+}
+
+.cart {
+	/* position: fixed; */
 	width: 100%;
-	margin: 40px auto;  
-	overflow: hidden;
-	position: relative;
-	
-	border-radius: 0.6em;
-	background: #ecf0f1;
-	box-shadow: 0 0.5em 0 rgba(138, 148, 152, 0.2);
-  }
-  
-  .heading {
+	/* margin: auto; */
+	/* width: 40%; */
+	/* min-height: 15em; */
+	background-color: #CDD93F;
+	top: 0em;
+	right: 0em;
+	margin-right: 1em;
 	padding: 1em;
-	position: relative;
-	z-index: 1;
-	color: #f7f7f7;
-	background: #f34d35;
-  }
-  
-  .cart {
-	margin: 2.5em;
-	overflow: hidden;
-  }
-  
-  .cart.is-closed {
-	height: 0;
-	margin-top: -2.5em;
-  }
-  
-  .table {
-	background: #ffffff;
-	border-radius: 0.6em;
-	overflow: hidden;
-	clear: both;
-	margin-bottom: 1.8em;
-  }
-  
-  
-  .layout-inline > * {
-	display: inline-block;
-  }
-  
-  .align-center {
-	text-align: center;
-  }
-  
-  .th {
-	background: #f34d35;
-	color: #fff;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 1.5em;
-  }
-  
-  .tf {
-	background: #f34d35;
-	text-transform: uppercase;
-	text-align: right;
-	font-size: 1.2em;  
-  }
-  
-  .tf p {
-	color: #fff;
-	font-weight: bold;
-  }
-  
-  .col {
-	padding: 1em;
-	width: 12%;
-  }
-  
-  .col-pro {
-	width: 44%;
-  }
-  
-  .col-pro > * {
-	vertical-align: middle;
-  }
-  
-  .col-qty {
-	text-align: center;
-	width: 17%;
-  }
-  
-  .col-numeric p {
-	font: bold 1.8em helvetica;
-  }
-  
-  .col-total p {
-	color: #12c8b1;
-  }
-  
-  .tf .col {
+	/* border: 0.1em solid; */
+	border-radius: 0.25em;
+	/* z-index: 1000; */
+}
+
+.cartTotal {
+	position: fixed;
+	/* width: 100%; */
+	/* margin: auto; */
 	width: 20%;
+	/* min-height: 15em; */
+	/*background-color: #CDD93F;*/
+	top: 0em;
+	right: 0em;
+	margin-right: 1em;
+	padding: 1em;
+	/* border: 0.1em solid; */
+	border-radius: 0.25em;
+	/* z-index: 1000; */
+}
+
+.cart table {
+	border-collapse: collapse;
+}
+
+.cart table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.cart td {
+	border-top: 1px solid snow;
+} 
+
+.cart th, td {
+	padding: 15px;
+	text-align: left;
+}
+
+.cart img {
+	width: 2em;
+}
+
+.cart h3 {
+	/* text-decoration: underline; */display: inline;
+}
+
+.cartTotal {
+	padding: 1em;
+}
+
+.cartTotal img {
+	/* padding: 1em; */
+	width: 2em;
+}
+
+.info {
+	height: 15em;
+}
+
+  .small {
+	background-color: #E03571;
   }
-  
-  .row > div {
-	vertical-align: middle;
-  }
-  
-  .row-bg2 {
-	background: #f7f7f7;
-  }
-  
-  .visibility-cart {
-	position: absolute;
-	color: #fff;
-	top: 0.5em;
-	right: 0.5em;
-	font:  bold 2em arial;
-	border: 0.16em solid #fff;
-	border-radius: 2.5em;
-	padding: 0 0.22em 0 0.25em ;
-  }
-  
-  .col-qty > * {
-	vertical-align: middle; 
-  }
-  
-  .col-qty > input {
-	max-width: 2.6em;
-  }
-  
-  
-  a.qty {
-	width: 1em;
-	line-height: 1em;
-	border-radius: 2em;
-	font-size: 2.5em;
-	font-weight: bold;
-	text-align: center;
-	background: #43ace3;  
-	color: #fff;
-  }
-  
-  a.qty:hover {
-	background: #3b9ac6;
-  }
-  
-  .btn {
-	padding: 10px 30px;
-	border-radius: 0.3em;
-	font-size: 1.4em;
-	font-weight: bold;
-	background: #43ace3;
-	color: #fff;
-	box-shadow: 0 3px 0 rgba(59,154,198, 1)
-  }
-  
-  .btn:hover {
-	box-shadow: 0 3px 0 rgba(59,154,198, 0)
-  }
-  
-  .btn-update {
-	float: right;
-	margin: 0 0 1.5em 0;
-  }
-  
-  .transition {
-	transition: all 0.3s ease-in-out;
-  }
-  
-  @media screen and ( max-width: 755px) {
-	.container {
-	  width: 98%;
-	}
-	
-	.col-pro {
-	  width: 35%;
-	}
-	
-	.col-qty {
-	  width: 22%;
-	}
-	
-	img {
-	  max-width: 100%;
-	  margin-bottom: 1em;
-	}
-  }
-  
-  @media screen and ( max-width: 591px) {
-	
-  }
-  
+
+.medium {
+background-color: #E2AE3D;
+}
+
+.large {
+background-color: #E06733;
+flex : 2;
+}
+
+.specials div {
+flex: 1;
+/* border: 1px solid lightgrey; */
+margin: 0em;
+padding: 1em;
+
+}
+
+.small img {
+width: 4em;
+}
+
+.medium img {
+width: 5em;
+}
+
+
+.large img {
+width: 7em;
+
+}
+
+.footer {
+display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.qty {
+padding: 0.5em;
+width: 3em;
+}
+
+.pizza {
+flex: 1;
+margin: 0.5em;
+padding: 0.5em;
+/* background-color: ; */
+border-radius: 1em;
+}
+
+label {
+font-weight: bold;
+}
+
+select {
+padding: 0.2em;
+font-size: 1.5em;
+display: block;
+margin-top: 0.5em;
+margin-bottom: 1em;
+}
+
+input[type=text], input[type=number], textarea {
+padding: 0.2em;
+font-size: 1.5em;
+display: block;
+margin-top: 0.5em;
+margin-bottom: 1em;
+}
+
+input[type=submit], button {
+padding: 1em;
+  border: 0.3em solid #000;
+font-weight: bold;
+font-size: 1em;
+}
+
+table, td, th {    
+border: 1px solid snow;
+text-align: left;
+}
+
+table {
+border-collapse: collapse;
+width: 80%;
+}
+
+th, td {
+padding: 15px;
+}
+
+.space_below {
+margin-bottom: 1em;
+}
+
+@media (min-width: 768px){
+
+.cart {
+	width: 25%;
+	/* width: 40%; */
+	/* margin: auto; */
+	margin: 1em;
+}
+
+.pizzas {
+  display: flex;
+}
+
+body {
+  font-size: 1em;
+}
+
+}
+
+
+
+
