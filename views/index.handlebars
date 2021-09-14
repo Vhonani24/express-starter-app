@@ -1,47 +1,53 @@
-<div class="header"> 
+<div class="header">
     <h1>Perfect Pizza</h1>
-    <div class="cartTotal " >
-      <strong>Total price</strong>  
-      <span class="cartTotalPrice">0.00</span>
-      <a href="#">
-        <img src="shopping-cart.png" alt="">
-      </a>
+    <div class="cartTotal ">
+        <strong>Total price</strong>
+        <span class="cartTotalPrice">{{total}}</span>
+        <a href="#">
+            <img src="shopping-cart.png" alt="">
+        </a>
     </div>
 
 </div>
-<div class="cart" >
-      <h3>Shopping Cart</h3>
-      <img src="shopping-cart.png" alt="">
-
+<div class="cart">
+    <h3>Shopping Cart</h3>
+    <img src="shopping-cart.png" alt="">
+    <form action="/" method="get">
         <table>
-          <tr>
-            <td><strong>Small pizzas total:</strong></td>
-            <td><span class="smallTotalPrice">0.00</span></td>
-          </tr>
+            <tr>
+                <td><strong>Small pizzas total:</strong></td>
+                <td><span class="smallPizzaTotal"> <span>X{{smallCounter}}</span> {{small}}</span></td>
+            </tr>
 
-          <tr>
-            <td><strong>Medium pizzas total:</strong></td>
-            <td><span class="mediumTotalPrice">0.00</span></td>
-          </tr>
-          <tr>
-            <td><strong>Large pizza total:</strong></td>
-            <td><span class="largeTotalPrice">0.00</span></td>
-          </tr>
-          <tr>
-            <td><strong>Total price</strong></td>
-            <td><span class="totalPrice">0.00</span></td>
-          </tr>
+            <tr>
+                <td><strong>Medium pizzas total:</strong></td>
+                <td><span class="mediumTotalPrice"><span>X{{mediumCounter}}</span> {{medium}}</span></td>
+            </tr>
+            <tr>
+                <td><strong>Large pizza total:</strong></td>
+                <td><span class="largeTotalPrice"><span>X{{largeCounter}}</span> {{large}}</span></td>
+            </tr>
+            <tr>
+                <td><strong>Total price</strong></td>
+            <td><span class="totalPrice">{{total}}</span></td>
+            </tr>
         </table>
+    </form>
+
+
 
     <div class="orderBox">
-        <button class="btn orderLargePizza" style="margin-left: auto">Order</button>
+        <button class="btn orderLargePizza" style="margin-left: auto" type="submit" name="button">Order</button>
     </div>
-    </div>
+</div>
 
 
-    </div>
+</div>
 
-    <div class="pizzas">
+
+
+<div class="pizzas">
+    <form action="/medium" method="post">
         <div class="pizza medium">
             <div class="info">
                 <img src="pizza.png" alt="">
@@ -56,25 +62,34 @@
             </div>
 
             <div class="orderBox">
-                <button class="btn orderMediumPizza" style="margin-left: auto">Order medium pizza</button>
+                <button class="btn orderMediumPizza" style="margin-left: auto" value="medium"type="submit" name="medium">Order medium
+                    pizza</button>
             </div>
 
         </div>
-        <div class="pizza large">
-            <div class="info">
-                <img src="pizza.png" alt="">
-                <h2>Large Pizza</h2>
-                <strong>85.00</strong>
-                <div>
-                    large margeritha pizza with 3 toppings max.
-                    3 meat toppings max.
-                    3 or less other toppings.
-                </div>
-            </div>
-            <div class="orderBox">
-                <button class="btn orderLargePizza" style="margin-left: auto">Order large pizza</button>
+
+    </form>
+    <form action="/large" method="post">
+     <div class="pizza large">
+        <div class="info">
+            <img src="pizza.png" alt="">
+            <h2>Large Pizza</h2>
+            <strong>85.00</strong>
+            <div>
+                large margeritha pizza with 3 toppings max.
+                3 meat toppings max.
+                3 or less other toppings.
             </div>
         </div>
+        <div class="orderBox">
+            <button class="btn orderLargePizza" style="margin-left: auto" value="large"type="submit" name="large">Order large
+                pizza</button>
+        </div>
+    </div>
+    </form>
+
+   
+    <form action="/small" method="post">
         <div class="pizza small">
             <div class="info">
                 <img src="pizza.png" alt="">
@@ -89,11 +104,15 @@
                 </i>
             </div>
             <div class="orderBox">
-                <button class="btn orderSmallPizza" style="margin-left: auto">Order small pizza</button>
+                <button class="btn orderSmallPizza" style="margin-left: auto" value="small"type="submit" name="small">Order small
+                    pizza</button>
             </div>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="contact">
+         </div>
+    </form>
 
-        </div>
+</div>
+</div>
+<div class="footer">
+    <div class="contact">
+
+    </div>
